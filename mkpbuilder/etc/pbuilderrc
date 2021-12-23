@@ -1,0 +1,11 @@
+DEBOOTSTRAPOPTS=(
+    '--variant=minbase'
+    '--no-check-gpg'
+    "--include=ca-certificates,wget"
+    )
+APTCACHE=""
+HOOKDIR="/var/cache/pbuilder/hook.d/"
+COMPONENTS="main contrib non-free"
+APTCACHEHARDLINK=no
+AUTOCLEANAPTCACHE=yes
+MIRRORSITE=https://deb.debian.org/debian/

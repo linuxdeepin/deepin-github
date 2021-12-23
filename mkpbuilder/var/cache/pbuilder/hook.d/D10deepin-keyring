@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+keyring_deb=/tmp/deepin-keyring.deb
+wget https://community-packages.deepin.com/deepin/pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb -O ${keyring_deb}
+apt -y install ${keyring_deb}
+rm -v ${keyring_deb}

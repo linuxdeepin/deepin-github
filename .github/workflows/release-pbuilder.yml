@@ -1,0 +1,18 @@
+name: Publish Pbuilder
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build Pbuilder
+      run: mkpbuilder/scripts/build-pbuilder-tgz.sh
+    - name: Upload release artifacts
+      uses: softprops/action-gh-release@v1
+      with:
+        files: pbuilder.tgz
