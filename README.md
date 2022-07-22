@@ -13,7 +13,7 @@ This is a docker image for build Debian package.
 
 create Github Action YAML file `.github/workflows/pr.yml`:
 
-``` yaml
+```yaml
 on: [pull_request]
 
 jobs:
@@ -31,10 +31,9 @@ Use deepin-community repository by default, we can use `/entrypoint.sh reponame`
 
 The currently maintainly repos could be found in [repos folder](./repos).
 
-
 Multi-repos build Actions example:
 
-``` yaml
+```yaml
 on: [pull_request]
 
 jobs:
@@ -50,7 +49,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: /entrypoint.sh ${{ matrix.repo }}
 ```
-
 
 ## Why this image required `privileged`
 

@@ -13,7 +13,7 @@
 
 编辑 `.github/workflows/pr.yml`:
 
-``` yaml
+```yaml
 on: [pull_request]
 
 jobs:
@@ -27,12 +27,11 @@ jobs:
       - run: /entrypoint.sh
 ```
 
-默认使用Deepin 社区仓库编译,可以通过`/entrypoint.sh 仓库名`来指定使用哪个仓库来编译, 当前支持的仓库可以在 [repos 文件夹](./repos) 中看到
-
+默认使用Deepin 社区仓库编译,可以通过 `/entrypoint.sh 仓库名`来指定使用哪个仓库来编译, 当前支持的仓库可以在 [repos 文件夹](./repos) 中看到
 
 多仓库Actions 示例:
 
-``` yaml
+```yaml
 on: [pull_request]
 
 jobs:
@@ -48,9 +47,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: /entrypoint.sh ${{ matrix.repo }}
 ```
-
-
-
 
 ## 为什么这个镜像要求 `privileged` 权限
 
